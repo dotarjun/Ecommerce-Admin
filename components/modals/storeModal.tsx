@@ -4,6 +4,7 @@ import * as z from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
+import axios from "axios";
 
 import { UseStoreModal } from "@/hooks/UseStateModal";
 import { Modal } from "@/components/ui/modal";
@@ -35,8 +36,17 @@ const StoreModal = () => {
   });
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
-    // TODO: Create Score
-    console.log(values);
+    try {
+      setLoading(true);
+
+      const response = await axios.post("/api/stores", values);
+
+      console.log(response.data);
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
