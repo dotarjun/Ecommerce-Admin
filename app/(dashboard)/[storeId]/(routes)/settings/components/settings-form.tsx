@@ -16,6 +16,7 @@ import {
   FormField,
   FormItem,
   FormLabel,
+  FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 
@@ -63,12 +64,20 @@ const SettingsForm: React.FC<SettingsFormProps> = ({ initialData }) => {
                 <FormItem>
                   <FormLabel>Name</FormLabel>
                   <FormControl>
-                    <Input />
+                    <Input
+                      disabled={loading}
+                      placeholder="Store name"
+                      {...field}
+                    />
                   </FormControl>
+                  <FormMessage />
                 </FormItem>
               )}
             />
           </div>
+          <Button disabled={loading} className="ml-auto" type="submit">
+            Save Changes
+          </Button>
         </form>
       </Form>
     </>
