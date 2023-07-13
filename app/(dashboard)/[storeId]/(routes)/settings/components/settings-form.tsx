@@ -59,16 +59,18 @@ const SettingsForm: React.FC<SettingsFormProps> = ({ initialData }) => {
     }
   };
 
-  const onConfirm = async () => {
+  const onDelete = async () => {
     try {
       setLoading(true);
       await axios.delete(`/api/stores/${params.storeId}`);
       router.refresh();
-      toast.success("Store Permanently Deleted");
+      toast.success(`${params.name} store deleted`);
+      router.push("/");
     } catch (error) {
-      toast.error("Something Went Wrong");
+      toast.error("Make sure you remove all the products and categories");
     } finally {
       setLoading(false);
+      setOpen(false);
     }
   };
 
