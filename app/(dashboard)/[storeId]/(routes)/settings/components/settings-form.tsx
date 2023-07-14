@@ -23,6 +23,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import AlertModal from "@/components/modals/alertModal";
+import { APIAlert } from "@/components/ui/apiAlert";
 
 interface SettingsFormProps {
   initialData: Store;
@@ -121,6 +122,8 @@ const SettingsForm: React.FC<SettingsFormProps> = ({ initialData }) => {
           </Button>
         </form>
       </Form>
+      <Separator />
+      <APIAlert title="Title" description="Desc" />
     </>
   );
 };
