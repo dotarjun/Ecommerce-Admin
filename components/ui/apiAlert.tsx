@@ -34,7 +34,7 @@ export const APIAlert: React.FC<APIAlertProps> = ({
   };
 
   return (
-    <Alert className="grid grid-cols-[1rem,auto] gap-2">
+    <Alert className="grid grid-cols-[1rem,auto] gap-2 md:gap-4">
       <div className="w-4 h-4 pt-[2px]">
         <Server className="h-4 w-4" />
       </div>
