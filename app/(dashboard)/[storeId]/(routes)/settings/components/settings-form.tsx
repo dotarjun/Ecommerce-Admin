@@ -24,6 +24,7 @@ import {
 import { Input } from "@/components/ui/input";
 import AlertModal from "@/components/modals/alertModal";
 import { APIAlert } from "@/components/ui/apiAlert";
+import useOrigin from "@/hooks/useOrigin";
 
 interface SettingsFormProps {
   initialData: Store;
@@ -38,6 +39,7 @@ type SettingsFormValues = z.infer<typeof formSchema>;
 const SettingsForm: React.FC<SettingsFormProps> = ({ initialData }) => {
   const params = useParams();
   const router = useRouter();
+  const origin = useOrigin();
 
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
