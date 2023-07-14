@@ -42,7 +42,7 @@ export const APIAlert: React.FC<APIAlertProps> = ({
         <code className="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold">
           {description}
         </code>
-        <Button variant="outline" size="icon" onClick={onCopy}>
+        <Button className="ml-2" variant="outline" size="icon" onClick={onCopy}>
           <Copy className="h-4 w-4" />
         </Button>
       </AlertDescription>
