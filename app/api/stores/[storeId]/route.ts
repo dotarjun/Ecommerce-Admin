@@ -1,6 +1,5 @@
 import prismadb from "@/lib/prismadb";
 import { auth } from "@clerk/nextjs";
-import { Store } from "lucide-react";
 import { NextResponse } from "next/server";
 
 export const PATCH = async (
@@ -34,7 +33,7 @@ export const PATCH = async (
         name,
       },
     });
-    return NextResponse.json(Store);
+    return NextResponse.json(store);
   } catch (error) {
     console.log("[STORE_PATCH]", error);
     return new NextResponse("Internal Error", { status: 500 });
@@ -61,7 +60,7 @@ export const DELETE = async (
         userId,
       },
     });
-    return NextResponse.json(Store);
+    return NextResponse.json(store);
   } catch (error) {
     console.log("[STORE_DELETE]", error);
     return new NextResponse("Internal Error", { status: 500 });
