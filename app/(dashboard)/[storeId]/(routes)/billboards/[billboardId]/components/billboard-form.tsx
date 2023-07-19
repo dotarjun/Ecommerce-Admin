@@ -92,7 +92,7 @@ const BillboardForm: React.FC<BillboardFormProps> = ({ initialData }) => {
       );
       router.refresh();
       toast.success(`Billboard deleted`);
-      router.push("/");
+      router.push(`/${params.storeId}/billboards`);
     } catch (error) {
       toast.error("Make sure you remove all categories using this billboard");
     } finally {
