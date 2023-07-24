@@ -16,10 +16,10 @@ import {
 import { Button } from "@/components/ui/button";
 import AlertModal from "@/components/modals/alertModal";
 
-import { BillboardColumn } from "./columns";
+import { ProductColumn } from "./columns";
 
 interface CellActionProps {
-  data: BillboardColumn;
+  data: ProductColumn;
 }
 
 const CellAction: React.FC<CellActionProps> = ({ data }) => {
@@ -31,21 +31,21 @@ const CellAction: React.FC<CellActionProps> = ({ data }) => {
 
   const onCopy = (id: string) => {
     navigator.clipboard.writeText(id);
-    toast.success("Billboard ID copied to clipboard");
+    toast.success("Product ID copied to clipboard");
   };
 
   const onUpdate = (id: string) => {
-    router.push(`/${params.storeId}/billboards/${id}`);
+    router.push(`/${params.storeId}/products/${id}`);
   };
 
   const onDelete = async () => {
     try {
       setLoading(true);
-      await axios.delete(`/api/${params.storeId}/billboards/${data.id}`);
+      await axios.delete(`/api/${params.storeId}/products/${data.id}`);
       router.refresh();
-      toast.success(`Billboard deleted`);
+      toast.success(`Product deleted`);
     } catch (error) {
-      toast.error("Make sure you remove all categories using this billboard");
+      toast.error("Something went wrong");
     } finally {
       setLoading(false);
       setOpen(false);
