@@ -31,12 +31,13 @@ Built as a responsive web app, it provides a seamless experience across devices.
 ## Tech Stack 
 
 - Next.js
-- React
 - TypeScript
-- PlanetScale MySQL
-- Prisma ORM
-- Tailwind CSS 
-- Vercel
+- Tailwind CSS
+- Prisma
+- MySQL
+- PlanetScale
+- Shadcn UI
+- Stripe
 
 ## Getting Started
 
