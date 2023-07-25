@@ -45,7 +45,6 @@ Built as a responsive web app, it provides a seamless experience across devices.
 2. Install dependencies with `npm install`
 3. Configure environment variables 
 4. Run the dev server with `npm run dev`
-5. Access the admin at `http://localhost:3000/admin`
 
 ## Contributing
 
