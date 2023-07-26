@@ -105,7 +105,7 @@ export const PATCH = async (
         colorId,
         sizeId,
         images: {
-          deleteMany: [],
+          deleteMany: {},
         },
         isFeatured,
         isArchived,
