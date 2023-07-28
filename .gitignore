@@ -5,6 +5,10 @@
 /.pnp
 .pnp.js
 
+#Guitars
+/public/guitars
+/public/billboards
+
 # testing
 /coverage
 
