@@ -1,6 +1,7 @@
 # Ecommerce Admin Dashboard
 
 This is an admin dashboard application for managing online ecommerce stores. It provides a full suite of management and analytics tools.
+
 **Live Preview:** [https://dashboard.guitargear.shop/](https://dashboard.guitargear.shop/)
 
 ## Table of Contents
