@@ -10,7 +10,6 @@ This is an admin dashboard application for managing online ecommerce stores. It 
 - [Getting Started](#getting-started)
 - [Contributing](#contributing)
 - [License](#license)
-- [Contact](#contact)
 
 ## Overview
 
